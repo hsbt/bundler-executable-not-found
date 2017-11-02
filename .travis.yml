@@ -22,4 +22,5 @@ before_install:
   - gem --version
 
 script:
+  - gem list
   - ruby ./script.rb
