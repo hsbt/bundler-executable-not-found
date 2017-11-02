@@ -1,5 +1,7 @@
-#puts "Before bundler/setup"
-#puts Gem.activate_bin_path('bundler', 'bundle', '>= 0.a')
+if ENV['ACTIVATE_BEFORE_SETUP'] == 'true'
+  puts "Before bundler/setup"
+  puts Gem.activate_bin_path('bundler', 'bundle', '>= 0.a')
+end
 
 require 'rubygems'
 require 'bundler/setup'

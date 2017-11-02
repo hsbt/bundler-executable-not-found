@@ -7,8 +7,9 @@ rvm:
 # features for open source projects.
 sudo: false
 
+env:
+  - ACTIVATE_BEFORE_SETUP=true
+  - ACTIVATE_BEFORE_SETUP=false
+
 script:
   - ruby ./script.rb
-
-
-
