@@ -12,5 +12,9 @@ env:
   - ACTIVATE_BEFORE_SETUP=true
   - ACTIVATE_BEFORE_SETUP=false
 
+before_install:
+  - rvm @global do gem uninstall bundler -a -x
+  - rvm @global do gem install bundler -v 1.15.0
+
 script:
   - ruby ./script.rb
