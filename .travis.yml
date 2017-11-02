@@ -8,7 +8,7 @@ rvm:
 sudo: false
 
 script:
-  - bin/some-binstub
+  - ruby ./script.rb
 
 
 
