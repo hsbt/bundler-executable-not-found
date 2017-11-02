@@ -13,11 +13,9 @@ env:
   - ACTIVATE_BEFORE_SETUP=false
 
 before_install:
+  - gem uninstall bundler bundle rubygems-update --all -x
   - gem update --system 2.6.14
-  - gem list
-  - rvm @global do gem uninstall bundler -a -x
-  - gem list
-  - rvm @global do gem install bundler -v 1.15.4
+  - gem install bundler
   - bundle --version
   - gem --version
 
