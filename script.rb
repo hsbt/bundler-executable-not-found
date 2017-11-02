@@ -1,7 +1,7 @@
-
 puts "Before bundler/setup"
 puts Gem.activate_bin_path('bundler', 'bundle', '>= 0.a')
 
+require 'rubygems'
 require 'bundler/setup'
 
 puts "After bundler/setup"
