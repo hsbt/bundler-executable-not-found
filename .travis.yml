@@ -12,20 +12,6 @@ env:
   - ACTIVATE_BEFORE_SETUP=true
   - ACTIVATE_BEFORE_SETUP=false
 
-addons:
-  apt:
-    packages:
-    - tree
-
-before_install:
-  - tree /home/travis/.rvm/rubies/ruby-2.1.7/lib/ruby/
-  - rvm @global do gem uninstall rubygems-update --all -x
-  - rvm @global do gem uninstall bundler --all -x
-  - rvm @global do gem update --system 2.6.14
-  - rvm @global do gem install bundler
-  - bundle --version
-  - gem --version
-
 install: bundle install
 
 script:
